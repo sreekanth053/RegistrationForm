@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBn+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b2b0c00f0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="form-container col-12">
+        <h3 class="text-center heading">Registration Form</h3>
+        <hr>
+        <div class="form-1">
+            <form class="homepage" id="myForm" action="/action_page.php">
+                <label for="name" class="input-fields">Name<span class="star">*</span></label><br />
+                <input type="text" id="name" class="inputbox" placeholder="First" size="25" />
+                <input type="text" id="name" class="inputbox" placeholder="Last" size="25" />
+                <p id="nameErrMsg" class="errorMessage"></p>
+                <div class="dob-container mt-2">
+                    <label for="dob" class="input-fields">Date Of Birth<span class="star">*</span></label><br />
+                    <input id="dob" class="inputbox" type="date" placeholder="Last" size="50" />
+                    <p id="dobErrMsg" class="errorMessage"></p>
+                </div>
+                <div class="eamil-container mt-2">
+                    <label for="email" class="input-fields">Email<span class="star">*</span></label><br>
+                    <input type="text" id="email" class="inputbox" placeholder="Email" size="50" />
+                    <p id="emailErrMsg" class="errorMessage"></p>
+                </div>
+                <div class="fathersname-container mt-2">
+                    <label for="fatherName" class="input-fields">Father's Name<span class="star">*</span></label>
+                    <div class="inputs">
+                        <input type="text" id="fatherName" class="inputbox" placeholder="First" />
+                        <input type="text" id="fatherName" class="inputbox" placeholder="Last" />
+                        <p id="fatherNameErrMsg" class="errorMessage"></p>
+                    </div>
+                </div>
+                <div class="mothersname-container mt-2">
+                    <label for="motherName" class="input-fields">Mother's Name<span class="star">*</span></label>
+                    <div class="inputs">
+                        <input type="text" id="motherName" class="inputbox" placeholder="First" />
+                        <input type="text" id="motherName" class="inputbox" placeholder="Last" />
+                        <p id="motherNameErrMsg" class="errorMessage"></p>
+                    </div>
+                </div>
+                <div class="gender-container mt-2">
+                    <label for="gender" class="input-fields">Gender<span class="star">*</span></label>
+                    <br>
+                    <input id="gender" type="radio" name="gender" value="male" class="ml-1">Male
+                    <br />
+                    <input type="radio" name="gender" id="female" value="female" class="ml-1">Female
+                </div>
+                <div class="nationality-container mt-2">
+                    <label for="nationality" class="input-fields">Nationality<span class="star">*</span></label><br>
+                    <input type="text" id="nationality" class="inputbox" size="50" />
+                    <p id="nationalityErrMsg" class="errorMessage"></p>
+                </div>
+                <div class="address-container">
+                    <label for="address" class="input-fields">Address<span class="star">*</span></label><br>
+                    <input type="text" id="address" class="inputbox" placeholder="Street Address" size="50" />
+                    <p id="streetErrMsg" class="errorMessage"></p>
+                    <div class="inputs">
+                        <input type="text" id="city" class="inputbox" placeholder="City" size="25" />
+                        <select class="inputboxnames" id="country" placeholder="Country">
+                            <option class="option" checked>--country--</option>
+                            <option class="option">India</option>
+                            <option class="option">USA</option>
+                            <option class="option">UK</option>
+                            <option class="option">Others</option>
+                        </select>
+                        <p id="cityErrMsg" class="errorMessage"></p>
+                    </div>
+                </div>
+                <div class="telephone-container mt-2">
+                    <label for="telephoneHome" class="input-fields">Telephone-Home</label><br>
+                    <input type="text" id="telephoneHome" class="inputbox" placeholder="### ### ####" size="50" />
+                </div>
+                <div class="mobile-container mt-2">
+                    <label for="telephoneMobile" class="input-fields">Telephone-Mobile<span class="star">*</span></label><br>
+                    <input type="text" id="telephoneMobile" class="inputbox" placeholder="### ### ####" size="50" />
+                    <p id="mobileErrMsg" class="errorMessage"></p>
+                </div>
+                <div class="form-2">
+                    <div class="hsc-institution-container mt-2">
+                        <label for="hscInstitutionName" class="input-fields">HSC Institution name<span class="star">*</span></label><br>
+                        <input type="text" id="hscInstitutionName" class="inputbox" size="50" />
+                        <p id="hscInstitutionNameErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="hsc-board-container mt-2">
+                        <label for="hscBoard" class="input-fields">HSC Board<span class="star">*</span></label><br>
+                        <input type="text" id="hscBoard" class="inputbox" placeholder="i.e CBSC, ICSC or State board" size="50" />
+                        <p id="hscBoardErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="hsc-score-container mt-2">
+                        <label for="hscScore" class="input-fields">Score in HSC in percentage<span class="star">*</span></label><br>
+                        <input type="text" id="hscScore" class="inputbox" size="50" />
+                        <p id="hscPercentageErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="ssc-institution-container mt-2">
+                        <label for="sscInstitutionName" class="input-fields">SSC Institution name<span class="star">*</span></label><br>
+                        <input type="text" id="sscInstitutionName" class="inputbox" size="50" />
+                        <p id="sscInstitutionNameErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="ssc-board-container mt-2">
+                        <label for="sscBoard" class="input-fields">SSC Board<span class="star">*</span></label><br>
+                        <input type="text" id="sscBoard" class="inputbox" placeholder="i.e CBSC, ICSC or State board" size="50" />
+                        <p id="sscBoardErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="ssc-score-container mt-2">
+                        <label for="sscScore" class="input-fields">Score in SSC in percentage<span class="star">*</span></label><br>
+                        <input type="text" id="sscScore" class="inputbox" size="50" />
+                        <p id="sscPercentageErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="pursuing-container mt-2">
+                        <label for="currentlyPursuing" class="input-fields">Currently pursuing<span class="star">*</span></label><br>
+                        <input type="text" id="currentlyPursuing" class="inputbox" size="50" />
+                        <p id="currentlyPursuingErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="pursuing-college-container mt-2">
+                        <label for="currentInstitutionName" class="input-fields">Current educational institution name<span class="star">*</span></label><br>
+                        <input type="text" id="currentInstitutionName" class="inputbox" size="50" />
+                        <p id="currentInstitutionNameErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="pecentage-container mt-2">
+                        <label for="overallPercentage" class="input-fields">Overall percentage<span class="star">*</span></label><br>
+                        <input type="text" id="overallPercentage" class="inputbox" size="50" />
+                        <p id="overallPercentageErrMsg" class="errorMessage"></p>
+                    </div>
+                    <div class="backlogs-container mt-2">
+                        <label for="currentBacklogs" class="input-fields">Current backlogs if any</label><br>
+                        <input type="text" id="currentBacklogs" class="inputbox" size="50" />
+                    </div>
+
+                </div>
+                <br>
+                <div class="form-3">
+                    <div class="file-uploading mt-1">
+                        <label for="myfile" id="browserFile" class="input-fields">Browse a file:</label>
+                        <input type="file" id="myfile" class="input-fields" name="myfile">
+                    </div>
+                    <br>
+                    <div class="file-uploading mt-1">
+                        <label for="uploadfile2" id="uploadFile2" class="input-fields">Upload File 2</label>
+                        <input type="file" id="uploadfile2" class="input-fields" name="myfile">
+                    </div>
+                    <br>
+                    <div class="file-uploading mt-1">
+                        <label for="uploadfile3" class="input-fields">Upload File 3</label>
+                        <input type="file" id="uploadfile3" class="input-fields" name="myfile">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start flex-row mt-3">
+                    <button class="btn btn-primary text-center" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
